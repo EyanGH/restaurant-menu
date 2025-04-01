@@ -2,86 +2,114 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #f5e8c7;
+  color: #3c2f2f;
+  direction: rtl;
 }
 
 .app-container {
   max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  text-align: right;
-  direction: rtl;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff8e1;
+  border: 2px solid #8d5524;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  color: #2c3e50;
-  margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #8d5524;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px dashed #c68a39;
+  padding-bottom: 10px;
 }
 
 .search-container {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .search-input {
-  width: 100%;
-  max-width: 300px;
+  width: 60%;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
   font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid #c68a39;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #3c2f2f;
+}
+
+.search-input::placeholder {
+  color: #8d5524;
+  opacity: 0.7;
 }
 
 .add-button {
-  background-color: #27ae60;
-  color: white;
+  display: block;
+  margin: 0 auto 20px;
   padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #c68a39;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
-  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .add-button:hover {
-  background-color: #219653;
+  background-color: #8d5524;
 }
 
 .menu-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff8e1;
 }
 
 .menu-table th,
 .menu-table td {
-  padding: 12px;
-  border: 1px solid #ddd;
+  padding: 15px;
   text-align: right;
+  border-bottom: 1px solid #c68a39;
 }
 
 .menu-table th {
-  background-color: #ecf0f1;
-  color: #2c3e50;
-  font-weight: bold;
+  background-color: #8d5524;
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 .menu-table td {
-  color: #34495e;
+  font-size: 1.1rem;
+}
+
+.menu-table tr:hover {
+  background-color: #f5e8c7;
 }
 
 .delete-button {
-  background-color: #e74c3c;
-  color: white;
+  padding: 8px 15px;
+  background-color: #a94442;
+  color: #fff;
   border: none;
-  padding: 6px 12px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .delete-button:hover {
-  background-color: #c0392b;
+  background-color: #7a2f2d;
 }
 
 .modal {
@@ -92,120 +120,109 @@ h2 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 1000;
+  align-items: center;
 }
 
 .modal-content {
-  background-color: #fff;
-  padding: 20px;
+  background-color: #fff8e1;
+  padding: 30px;
+  border: 2px solid #8d5524;
   border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .modal-content h3 {
-  color: #2c3e50;
+  font-size: 1.8rem;
+  color: #8d5524;
+  text-align: center;
   margin-bottom: 20px;
 }
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
 .form-group {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .form-group label {
+  display: block;
+  font-size: 1.1rem;
   margin-bottom: 5px;
-  color: #34495e;
-  font-weight: bold;
+  color: #3c2f2f;
 }
 
 .form-group input {
+  width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
   font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid #c68a39;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 .error {
-  color: #e74c3c;
+  color: #a94442;
   font-size: 0.9rem;
   margin-top: 5px;
 }
 
 .form-buttons {
   display: flex;
-  gap: 10px;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.submit-button,
+.cancel-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button {
-  background-color: #3498db;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #c68a39;
+  color: #fff;
 }
 
 .submit-button:hover {
-  background-color: #2980b9;
+  background-color: #8d5524;
 }
 
 .cancel-button {
-  background-color: #95a5a6;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #a94442;
+  color: #fff;
 }
 
 .cancel-button:hover {
-  background-color: #7f8c8d;
+  background-color: #7a2f2d;
 }
 
 @media (max-width: 600px) {
   .app-container {
-    padding: 10px;
+    margin: 20px;
+    padding: 20px;
   }
 
   h2 {
-    font-size: 1.5rem;
-  }
-
-  .search-input {
-    max-width: 100%;
+    font-size: 2rem;
   }
 
   .menu-table th,
   .menu-table td {
-    padding: 8px;
-    font-size: 0.9rem;
+    padding: 10px;
+    font-size: 1rem;
   }
 
   .modal-content {
     width: 90%;
-    padding: 15px;
+    padding: 20px;
   }
 
-  .form-group input {
-    font-size: 0.9rem;
-  }
-
-  .submit-button,
-  .cancel-button,
-  .add-button,
-  .delete-button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+  .search-input {
+    width: 80%;
   }
 }
